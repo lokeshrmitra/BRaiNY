@@ -1,0 +1,56 @@
+<!DOCTYPE html /> 
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script> 
+
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+
+-->
+<style>
+</style>
+<script>
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+  var config = {
+    apiKey: "AIzaSyBgDkJt8I4pK9Fej0cfN_d3TskxMVsHCcE",
+    authDomain: "brainy-7dac9.firebaseapp.com",
+    databaseURL: "https://brainy-7dac9.firebaseio.com",
+    storageBucket: "brainy-7dac9.appspot.com",
+    messagingSenderId: "338804187531"
+  };
+  firebase.initializeApp(config);
+ 
+  
+  var username = 'lokesh';
+  const dbRef = firebase.database().ref().child('chat');
+  const messagesRef = dbRef.child('messages');
+  const usersRef = dbRef.child('users');
+  
+  var msg = messagesRef.child(username);
+  msg.on('value', function(data){
+	var allMessages = data.val();
+	for(var i in allMessages){
+		var m = allMessages[i];
+		if(m.key_from_bot)
+			$('#fire').append("<p style=\"color:red\">"+m.message+"</p>");
+		else
+			$('#fire').append("<p>"+m.message+"</p>");
+	}
+  });
+</script>
+</head>
+<body>
+<pre id="fire">
+Nope.
+</pre>
+</body>
+</html>

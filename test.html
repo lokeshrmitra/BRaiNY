@@ -1,0 +1,53 @@
+<!DOCTYPE html /> 
+<html>
+<head>
+<title id="tt">BR</title>
+<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="style.css" />
+<body>
+<div class="chat_window">
+    <div class="top_menu">
+        <div class="buttons">
+            <button class="button close" id="closeButton"></button>
+        </div>
+        <div class="title">BRaiNY</div>
+    </div> 
+	
+	<div class="userDetails">
+		<form class="userDetailsForm" style="">
+			<p>Help us connect to you</p><br />
+			<input id="details_name" type="text" placeholder="Name" style="text-align:center;" /><br /><br />
+			<input id="details_email" type="email" placeholder="Your email"  style="text-align:center;" /><br /><br />
+			<input type="submit" class="userDetailsSubmit btn" calue="Submit"/><br />
+			<div class="form_status"></div>
+		</form>
+	</div>
+	
+    <ul class="messages"></ul>
+	
+    <div class="bottom_wrapper clearfix">
+        <div class="message_input_wrapper">
+            <input class="message_input" placeholder="Type your message here..." />
+        </div>
+        <div class="send_message">
+            <div class="icon"></div>
+            <div class="text">Send</div>
+        </div>
+    </div>
+</div>
+<div class="message_template">
+    <li class="message">
+        <div class="avatar"></div>
+        <div class="text_wrapper">
+            <div class="text"></div>
+        </div>
+    </li>
+</div>
+<div class="chatCircle">
+
+</div>
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
