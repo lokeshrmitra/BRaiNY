@@ -1,0 +1,70 @@
+<!DOCTYPE html /> 
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" type="text/css" href="admin_style.css" />
+</head>
+<body>
+
+<div class="container-fluid head-title">
+	<h1>Consultant</h1>
+</div>	
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-3 col-sm-3 col-xs-2 chats">
+			<div class="chats-head" style="text-align:center"><h2>Chats</h2></div>
+			<div id="loading_div"><img src="loading.gif" /></div>
+			<div style="overflow-y: scroll;height: 100%" >
+			<ul class="chats-ul">
+				
+			</ul>
+			</div>
+		</div>
+		<div class="col-md-9 col-sm-9 col-xs-10 chatframe">
+			<div class="current-chat-head">
+				<h2>Click on a contact to chat</h2>
+			</div>
+			<div class="current-chat-area">
+				<ul class="current-chat-ul">
+					<!--
+					<li class="current-chat-li">
+						<div class="current-chat-message-wrapper">
+							<p class="current-chat-user-message">Hi there<sub>12</sub></p>	
+						</div>
+					</li>
+					-->
+				</ul>  
+            </div>
+            <div class="current-chat-footer">
+				<div class="panel-footer">
+					<div class="input-group">
+						<input type="text" class="form-control" id="message_input" />
+						<span class="input-group-btn">
+							<button class="btn btn-default" id="consultant-button" type="button">Send</button>
+						</span>
+					</div>
+                </div>
+            </div>
+		</div>
+	</div>
+</div>
+<button style="position:fixed;left:0;top:0;" id="test">add</button>
+<div class="chat_template"  style="display:none;">
+	<li class="chats-item">
+		<div><span class="chat_name">Lokesh Mitra</span><i class="chat_new fa fa-dot-circle-o"></i><p class="chat_text">Hi BRaiNY</p></div>
+	</li>
+</div>
+<div class="message_template" style="display:none;">
+	<li class="current-chat-li">
+		<div class="current-chat-message-wrapper">
+			<p class="current-chat-user-message"></p><i style="font-size:10px;"></i>
+		</div>
+	</li>
+</div>
+
+<script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+<script type="text/javascript" src="admin_script.js"></script>
+</body>
+</html>
